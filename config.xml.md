@@ -1,0 +1,64 @@
+# Directory: ```game/save/config```
+[Bit Rot SDK](./README.md)
+├── config [config.xml](./config.xml.md)
+
+## Main configuration
+This file used on Game Settings
+
+```xml
+<?xml version="1.0" ?>
+<config>
+    <ui>
+        <ui_background_music value="true" name="Background music (Default: True)"/>
+        <ui_show_tutorial_default value="true" name="Display Help and Tutorial at start gameplay"/>
+        <language value="pt_BR" name="Language"/>
+    </ui>
+    <game>
+        <time_daylength value="900000" name="Day length (Default: 15 minutes)"/>
+        <time_sunrise_hr value="5.5" name="Time sunrise (Default: 5:30)"/>
+        <time_sunset_hr value="17.5" name="Time sunset (Default: 17:30)"/>
+        <time_start_hr value="6.0" name="Start hour (Default: 6:00)"/>
+    </game>
+    <map>
+        <map_chunks value="3" name="Map size (Default: 3)"/>
+    </map>
+    <player>
+        <view_radius value="10" name="View radius tiles (Default: 10)"/>
+        <zoom_start value="3.0" name="Zoom start (Default: 3.0)"/>
+        <zoom_far value="2.0" name="Zoom max far (Default: 2.0)"/>
+        <zoom_near value="3.5" name="Zoom max near (Default: 3.5)"/>
+        <water_autodrink value="true" name="Allow Autodrink"/>
+        <water_threshold value="75" name="Minimum % to start autodrink (Default: 95)"/>
+    </player>
+    <item_spawning>
+        <item_spawn_chance_multiplier value="0.5" name="Global Multiplier"/>
+    </item_spawning>
+    <vehicle>
+        <vehicle_spawn_per_chunk value="5" name="Max vehicle spawn on chunk (Default: 5)"/>
+        <has_fuel_chance value="0.25" name="Car Fuel chance (Default: Low)"/>
+        <has_key_chance value="0.25" name="Car Key chance (Default: Low)"/>
+        <has_motor_chance value="1.0" name="Car Motor chance (Default: Low)"/>
+        <has_battery_chance value="0.25" name="Car Battery chance (Default: Low)"/>
+        <has_tires_chance value="1.0" name="Car Tires chance (Default: Balanced)"/>
+    </vehicle>
+    <animal>
+        <animal_spawn_per_chunk value="10" name="Max Animal spawn on chunk (Default: 10)"/>
+        <animal_respawn_ms_timer value="30000" name="Animal respawn (Default: 30000)"/>
+    </animal>
+    <npc>
+        <npc_spawn_per_chunk value="5" name="Max NPC spawn on chunk (Default: 5)"/>
+        <static_spawn_chance value="0.2" name="Max Static NPC (Default: 0.2)"/>
+        <hostile_spawn_chance value="0.5" name="Max Hostile NPC (Default: 0.5)"/>
+    </npc>
+    <zombie>
+        <zombie_spawn_per_chunk value="10" name="Max Zombie spawn on chunk (Default: 10)"/>
+        <spawn value="5" name="Zombies per spawn (Default: 5)"/>
+        <zombie_multiplier value="1" name="Multiplier respawn by day (Default: 1, example: day five will respawn 5x)"/>
+        <wander value="true" name="Zombie wandering (if False all Zombies will go to player)"/>
+        <sight_check value="true" name="Sight player (Default: true)"/>
+        <respawn_timer value="600000" name="Respawn (Default: 600000)"/>
+        <infection_chance value="0.25" name="Zombie infection chance (Default: 0.10)"/>
+    </zombie>
+</config>
+
+```

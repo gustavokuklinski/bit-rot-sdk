@@ -1,0 +1,50 @@
+# Directory: ```game/lib/data/```
+[Bit Rot SDK](./README.md)
+├── animals [creating_animals.md](./creating_animals.md)
+├── clothes [creating_clothes.md](./creating_clothes.md)
+├── craft [creating_crafts.md](./creating_crafts.md)
+├── help
+├── items [creating_items.md](./creating_items.md)
+├── map [creating_map.md](./creating_map.md)
+├── npc [creating_npcs.md](./creating_npcs.md), [creating_npcs.dialogs.md](./creating_npcs.dialogs.md)
+├── player [creating_player.md](./creating_player.md), [creating_player.progression.md](./creating_player.progression.md), [creating_player.traits.md](./creating_player.traits.md)
+├── vehicle [creating_vehicles.md](./creating_vehicles.md)
+└── zombie [creating_zombie.md](./creating_zombie.md)
+
+## Creating animals
+Create a new file with the name: `./game/lib/data/npc/dialogs.xml`
+Edit the game settings as the doc below:
+
+```xml
+<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+<!-- 
+    # <npc_dialog> attributtes and properties:
+    node id="greeting", node id="tips", node id="tips": Mandatory nodes.
+    node x="443", node y="140": Used for the Editor dialog constructor
+    <options 
+        player_question="How do I stay alive out here?"
+        npc_answer="Here's a map. This may save you." 
+        priority="10" # Lottery priority
+        req_level="[lucky:2]"  # To unlock need at least lucky level 2
+        gain_xp="[lucky:20]" # Gains lucky XP integer
+        dialog_type="once"  # This Dialog is unique
+        award_item="[Island Map]" # Awarded item for this dialog
+    />
+-->
+<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+<?xml version='1.0' encoding='utf-8'?>
+<npc_dialog>
+    <node id="greeting" x="65" y="120">
+        <options player_question="How's it going?" npc_answer="I just escaped with: [inventory_list]. You look like you've seen better days too." priority="100" />
+        <options player_question="You look like you've been through hell." npc_answer="Hell? No, this is just corporate cost-cutting with extra steps. At least in hell, the medical benefits would be better." priority="50" req_level="[lucky:1]" gain_xp="[lucky:1]" />
+    </node>
+    <node id="tips" x="443" y="140">
+        <options player_question="How do I stay alive out here?" npc_answer="Here's a map. This may save you." priority="10" req_level="[lucky:2]" gain_xp="[lucky:20]" dialog_type="once" award_item="[Island Map]" />
+        <options player_question="Any way to get around faster?" npc_answer="Exxoil left keys in all their jeeps. Same ignition. Corporate cost-cutting. Try these—they might work." priority="10" req_level="[lucky:3]" gain_xp="[lucky:30]" dialog_type="once" award_item="[Car Key Jeep]" />
+    </node>
+    <node id="lore_branch" x="779" y="133">
+        <options player_question="What happened to the continent?" npc_answer="Brazil fell first. Then the rest. The Plague didn't care about borders. Only the islands survived. For now." priority="20" gain_xp="[lucky:1]" />
+        <options player_question="Why did the helicopters leave us?" npc_answer="Standard protocol. Next Petrol doesn't rescue liabilities. We are the liability now. Every person is a potential carrier." priority="19" gain_xp="[lucky:1]" />
+    </node>
+</npc_dialog>
+```

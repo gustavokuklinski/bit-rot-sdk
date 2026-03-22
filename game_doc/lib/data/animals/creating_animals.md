@@ -1,15 +1,5 @@
 # Directory: ```game/lib/data/```
 [Bit Rot SDK](./README.md)
-├── animals [creating_animals.md](./creating_animals.md)
-├── clothes [creating_clothes.md](./creating_clothes.md)
-├── craft [creating_crafts.md](./creating_crafts.md)
-├── help
-├── items [creating_items.md](./creating_items.md)
-├── map [creating_map.md](./creating_map.md)
-├── npc [creating_npcs.md](./creating_npcs.md), [creating_npcs.dialogs.md](./creating_npcs.dialogs.md)
-├── player [creating_player.md](./creating_player.md), [creating_player.progression.md](./creating_player.progression.md), [creating_player.traits.md](./creating_player.traits.md)
-├── vehicle [creating_vehicles.md](./creating_vehicles.md)
-└── zombie [creating_zombie.md](./creating_zombie.md)
 
 ## Creating animals
 Create a new file with the name: `./game/lib/data/animal/[NAME].xml`

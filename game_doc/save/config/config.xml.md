@@ -1,6 +1,5 @@
 # Directory: ```game/save/config```
 [Bit Rot SDK](./README.md)
-├── config [config.xml](./config.xml.md)
 
 ## Main configuration
 This file used on Game Settings

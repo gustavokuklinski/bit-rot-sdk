@@ -1,5 +1,5 @@
 # Directory: ```game/lib/data/```
-[Bit Rot SDK](./README.md)
+[Bit Rot SDK](./../../../../README.md)
 
 ## Creating animals
 Create a new file with the name: `./game/lib/data/animal/[NAME].xml`

@@ -1,5 +1,5 @@
 # Directory: ```game/lib/data/vehicle```
-[Bit Rot SDK](./README.md)
+[Bit Rot SDK](./../../../../README.md)
 
 ## Creating Vehicles
 Create a new file with the name: `./game/lib/data/vehicle/car_[NAME].xml`

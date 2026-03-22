@@ -1,5 +1,5 @@
 # Directory: `game/lib/data/clothes/`
-[Bit Rot SDK](./README.md)
+[Bit Rot SDK](./../../../../README.md)
 
 ## Creating clothes
 Create a new file with the name: `./game/lib/data/cloth/[BODY_PART]_[NAME].xml`

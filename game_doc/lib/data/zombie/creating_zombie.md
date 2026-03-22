@@ -1,5 +1,5 @@
 # Directory: `game/lib/data/zombie/`
-[Bit Rot SDK](./README.md)
+[Bit Rot SDK](./../../../../README.md)
 
 ## Creating Zombies
 Create a new file with the name: `./game/lib/data/zombie/zombie_[TYPE].xml`

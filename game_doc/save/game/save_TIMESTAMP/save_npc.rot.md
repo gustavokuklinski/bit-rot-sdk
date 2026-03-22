@@ -1,5 +1,5 @@
 # Directory: ```game/save/game/save_[TIMESTAMP]```
-[Bit Rot SDK](./README.md)
+[Bit Rot SDK](./../../../../README.md)
 
 # Non-Player Characters (npc.rot)
 

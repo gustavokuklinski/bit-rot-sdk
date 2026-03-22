@@ -18,12 +18,12 @@ Understand the core design of the SDK
     * [config.xml](./game_doc/save/config/config.xml.md)
   * `game/`
     * `save_20260320_175855/`
-      * [save_host.rot](./game_doc/save/save/save_TIMESTAMP/save_host.rot.md)
-      * [save_npc.rot](./game_doc/save/save/save_TIMESTAMP/save_npc.rot.md)
-      * [save_vehicles.rot](./game_doc/save/save/save_TIMESTAMP/save_vehicles.rot.md)
-      * [save_zombies.rot](./game_doc/save/save/save_TIMESTAMP/save_zombies.rot.md)
-      * [save_world.rot](./game_doc/save/save/save_TIMESTAMP/save_world.rot.md)
-      * [save_animal.rot](./game_doc/save/save/save_TIMESTAMP/save_animal.rot.md)
+      * [save_host.rot](./game_doc/save/game/save_TIMESTAMP/save_host.rot.md)
+      * [save_npc.rot](./game_doc/save/game/save_TIMESTAMP/save_npc.rot.md)
+      * [save_vehicles.rot](./game_doc/save/game/save_TIMESTAMP/save_vehicles.rot.md)
+      * [save_zombies.rot](./game_doc/save/game/save_TIMESTAMP/save_zombies.rot.md)
+      * [save_world.rot](./game_doc/save/game/save_TIMESTAMP/save_world.rot.md)
+      * [save_animal.rot](./game_doc/save/game/save_TIMESTAMP/save_animal.rot.md)
       * `map/`
   * `player/` - Player saved XML presets
 

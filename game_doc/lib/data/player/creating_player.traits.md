@@ -1,5 +1,5 @@
 # Directory: `game/lib/data/player/`
-[Bit Rot SDK](./README.md)
+[Bit Rot SDK](./../../../../README.md)
 
 ## Creating Player Traits and Professions
 Edit the file: `./game/lib/data/player/traits.xml`

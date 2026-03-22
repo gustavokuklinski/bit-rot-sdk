@@ -1,5 +1,5 @@
 # Directory: `game/lib/data/npc/`
-[Bit Rot SDK](./README.md)
+[Bit Rot SDK](./../../../../README.md)
 
 ## Creating NPCs
 Create a new file with the name: `./game/lib/data/npc/npc_[TYPE].xml`

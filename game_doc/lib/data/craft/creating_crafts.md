@@ -1,5 +1,5 @@
 # Directory: `game/lib/data/craft/`
-[Bit Rot SDK](./README.md)
+[Bit Rot SDK](./../../../../README.md)
 
 ## Creating crafts
 Create a new file with the name: `./game/lib/data/crafts/[CRAFT]_[NAME].xml`

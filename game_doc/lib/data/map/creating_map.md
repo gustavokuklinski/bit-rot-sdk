@@ -1,5 +1,5 @@
 # Directory: `game/lib/data/map/`
-[Bit Rot SDK](./README.md)
+[Bit Rot SDK](./../../../../README.md)
 
 ## Creating map tiles
 Create a new file with the name: `./game/lib/data/map/[NAME].xml`

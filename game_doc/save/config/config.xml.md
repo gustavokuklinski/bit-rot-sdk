@@ -1,5 +1,5 @@
 # Directory: ```game/save/config```
-[Bit Rot SDK](./README.md)
+[Bit Rot SDK](./../../../../README.md)
 
 ## Main configuration
 This file used on Game Settings

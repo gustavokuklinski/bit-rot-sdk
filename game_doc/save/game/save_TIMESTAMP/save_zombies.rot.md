@@ -1,5 +1,5 @@
 # Directory: ```game/save/game/save_[TIMESTAMP]```
-[Bit Rot SDK](./README.md)
+[Bit Rot SDK](./../../../../README.md)
 
 # Zombies Data (zombies.rot)
 

@@ -1,5 +1,5 @@
 # Directory: ```game/lib/data/item```
-[Bit Rot SDK](./README.md)
+[Bit Rot SDK](./../../../../README.md)
 
 ## Creating items
 Create a new file with the name: `./game/lib/data/item/[TYPE]_[NAME].xml`

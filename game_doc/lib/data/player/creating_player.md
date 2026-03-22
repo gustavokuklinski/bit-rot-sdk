@@ -1,5 +1,5 @@
 # Directory: `game/lib/data/player/`
-[Bit Rot SDK](./README.md)
+[Bit Rot SDK](./../../../../README.md)
 
 ## Creating the base player profile
 Edit the file: `./game/lib/data/player/player.xml`

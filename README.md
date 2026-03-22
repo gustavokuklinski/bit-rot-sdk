@@ -10,25 +10,18 @@ Understand the core design of the SDK
 
 ```game$ tree -d```
 
+```markdown
 .
-
 ├── icons # Game basic icons
-
 ├── lib # Full reference: **Tweak `game/lib` tree**
-
 ├── logs # Crashlogs
-
 └── save # Game basic config
-
     ├── config [config.xml](./config.xml.md)
-
     ├── game 
-
     │   ├── save_20260320_175855 [save_host.rot](./save_host.rot.md), [save_npc.rot](./save_npc.rot.md), [save_vehicles.rot](./save_vehicles.rot.md), [save_zombies.rot](./save_zombies.rot.md), [save_world.rot](./save_world.rot.md), [save_animal.rot](./save_animal.rot.md)
-
     │   │   └── map
-
     └── player # Player saved XML presets
+```
 
 ----
 

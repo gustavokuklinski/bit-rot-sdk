@@ -10,7 +10,7 @@ Understand the core design of the SDK
 
 ```game$ tree -d```
 
-```markdown
+```
 .
 ├── icons # Game basic icons
 ├── lib # Full reference: **Tweak `game/lib` tree**

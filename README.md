@@ -39,27 +39,27 @@ Understand the core design of the SDK
 
   * `data/` - The main XML files of each category
       * `animals/`
-          * [creating_animals.md](./game_doc/lib/data/animals/creating_animals.md)
+          * [creating_animals.md](./game_doc/lib/data_doc/animals/creating_animals.md)
       * `clothes/`
-          * [creating_clothes.md](./game_doc/lib/data/clothes/creating_clothes.md)
+          * [creating_clothes.md](./game_doc/lib/data_doc/clothes/creating_clothes.md)
       * `craft/`
-          * [creating_crafts.md](./game_doc/lib/data/craft/creating_crafts.md)
+          * [creating_crafts.md](./game_doc/lib/data_doc/craft/creating_crafts.md)
       * `help/`
       * `items/`
-          * [creating_items.md](./game_doc/lib/data/items/creating_items.md)
+          * [creating_items.md](./game_doc/lib/data_doc/items/creating_items.md)
       * `map/`
-          * [creating_map.md](./game_doc/lib/data/map/creating_map.md)
+          * [creating_map.md](./game_doc/lib/data_doc/map/creating_map.md)
       * `npc/`
-          * [creating_npcs.md](./game_doc/lib/data/npc/creating_npcs.md)
-          * [creating_npcs.dialogs.md](./game_doc/lib/data/npc/creating_npcs.dialogs.md)
+          * [creating_npcs.md](./game_doc/lib/data_doc/npc/creating_npcs.md)
+          * [creating_npcs.dialogs.md](./game_doc/lib/data_doc/npc/creating_npcs.dialogs.md)
       * `player/`
-          * [creating_player.md](./game_doc/lib/data/player/creating_player.md)
-          * [creating_player.progression.md](./game_doc/lib/data/player/creating_player.progression.md)
-          * [creating_player.traits.md](./game_doc/lib/data/player/creating_player.traits.md)
+          * [creating_player.md](./game_doc/lib/data_doc/player/creating_player.md)
+          * [creating_player.progression.md](./game_doc/lib/data_doc/player/creating_player.progression.md)
+          * [creating_player.traits.md](./game_doc/lib/data_doc/player/creating_player.traits.md)
       * `vehicle/`
-          * [creating_vehicles.md](./game_doc/lib/data/vehicle/creating_vehicles.md)
+          * [creating_vehicles.md](./game_doc/lib/data_doc/vehicle/creating_vehicles.md)
       * `zombie/`
-          * [creating_zombie.md](./game_doc/lib/data/zombie/creating_zombie.md)
+          * [creating_zombie.md](./game_doc/lib/data_doc/zombie/creating_zombie.md)
   * `font/` - Game default font
   * `lang/` - Translation system - boilerplate pt\_BR\_\*.xml files to your language to translate
   * `map/` - Map \*.csv building tiles to be used with rot-editor

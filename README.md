@@ -1,9 +1,15 @@
 # Bit Rot SDK
 
+## Development builds
+Get the latest version for playtesting and bugfixes
+
+[Latest builds](./dev-builds/README.md)
+
+## Templating new items and tweaking
 Build your own game narratives and story lines. 
 Create your endings on an endless world.
 
-## Start here
+### Engine folder structure
 Understand the core design of the SDK
 
 **Basic `game/` tree**
@@ -79,8 +85,19 @@ Understand the core design of the SDK
       * `vehicle/`
       * `zombie/`
 
-## Setting up sprites
+### Setting up sprites
 The visuals must be on folder: ```./game/lib/sprites/[TYPE]/[SPRITE.PNG]```
 
-## Game defaults
+### Game defaults
 * Default sprite size is set to 16x16 pixels - Base asset pack: [kenney.nl/assets/1-bit-pack](https://kenney.nl/assets/1-bit-pack)
+
+### Debug Cheat codes
+On gameplay type on Messages:
+```shell
+%rot item "ITEM_NAME" # Spawn the item on player inventory
+%rot cloth "CLOTH_NAME" # Spawn the cloth on player inventory
+%rot vehicle "VEHICLE_NAME" # Spawn the vehicle 2 tiles from player
+%rot godzen # Restore all status and get the player invisible 
+%rot god # Restore all status
+
+```

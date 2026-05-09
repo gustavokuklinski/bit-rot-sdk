@@ -1,0 +1,373 @@
+2026-05-09T02:12:07.2829593Z Current runner version: '2.334.0'
+2026-05-09T02:12:07.2866928Z ##[group]Runner Image Provisioner
+2026-05-09T02:12:07.2868532Z Hosted Compute Agent
+2026-05-09T02:12:07.2869427Z Version: 20260422.526
+2026-05-09T02:12:07.2870262Z Commit: e1a9e573f4d0838b3a7c1b07401aeb29ed3635a9
+2026-05-09T02:12:07.2871510Z Build Date: 2026-04-22T09:31:31Z
+2026-05-09T02:12:07.2872527Z Worker ID: {2e197f94-bcdb-4bf4-8294-34cfe029bb9d}
+2026-05-09T02:12:07.2873743Z Azure Region: northcentralus
+2026-05-09T02:12:07.2874662Z ##[endgroup]
+2026-05-09T02:12:07.2876799Z ##[group]Operating System
+2026-05-09T02:12:07.2877696Z Microsoft Windows Server 2025
+2026-05-09T02:12:07.2878539Z 10.0.26100
+2026-05-09T02:12:07.2879219Z Datacenter
+2026-05-09T02:12:07.2879833Z ##[endgroup]
+2026-05-09T02:12:07.2880523Z ##[group]Runner Image
+2026-05-09T02:12:07.2881257Z Image: windows-2025
+2026-05-09T02:12:07.2881989Z Version: 20260428.110.2
+2026-05-09T02:12:07.2884011Z Included Software: https://github.com/actions/runner-images/blob/win25/20260428.110/images/windows/Windows2025-Readme.md
+2026-05-09T02:12:07.2886476Z Image Release: https://github.com/actions/runner-images/releases/tag/win25%2F20260428.110
+2026-05-09T02:12:07.2887987Z ##[endgroup]
+2026-05-09T02:12:07.2889836Z ##[group]GITHUB_TOKEN Permissions
+2026-05-09T02:12:07.2892262Z Contents: write
+2026-05-09T02:12:07.2893110Z Metadata: read
+2026-05-09T02:12:07.2893882Z ##[endgroup]
+2026-05-09T02:12:07.2897417Z Secret source: Actions
+2026-05-09T02:12:07.2898521Z Prepare workflow directory
+2026-05-09T02:12:07.3407949Z Prepare all required actions
+2026-05-09T02:12:07.3481962Z Getting action download info
+2026-05-09T02:12:07.7149255Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-05-09T02:12:07.8701868Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-05-09T02:12:08.0295429Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-05-09T02:12:08.2757665Z Download action repository 'softprops/action-gh-release@v1' (SHA:de2c0eb89ae2a093876385947365aca7b0e5f844)
+2026-05-09T02:12:08.6505881Z Complete job name: Build and Release on Windows
+2026-05-09T02:12:08.7901521Z ##[group]Run actions/checkout@v4
+2026-05-09T02:12:08.7902574Z with:
+2026-05-09T02:12:08.7903011Z   repository: gustavokuklinski/bit-rot
+2026-05-09T02:12:08.7903824Z   token: ***
+2026-05-09T02:12:08.7904211Z   ssh-strict: true
+2026-05-09T02:12:08.7904596Z   ssh-user: git
+2026-05-09T02:12:08.7904995Z   persist-credentials: true
+2026-05-09T02:12:08.7905438Z   clean: true
+2026-05-09T02:12:08.7905837Z   sparse-checkout-cone-mode: true
+2026-05-09T02:12:08.7906313Z   fetch-depth: 1
+2026-05-09T02:12:08.7906689Z   fetch-tags: false
+2026-05-09T02:12:08.7907084Z   show-progress: true
+2026-05-09T02:12:08.7907494Z   lfs: false
+2026-05-09T02:12:08.7907873Z   submodules: false
+2026-05-09T02:12:08.7908280Z   set-safe-directory: true
+2026-05-09T02:12:08.7909089Z ##[endgroup]
+2026-05-09T02:12:13.1813943Z Syncing repository: gustavokuklinski/bit-rot
+2026-05-09T02:12:13.1815905Z ##[group]Getting Git version info
+2026-05-09T02:12:13.1816846Z Working directory is 'D:\a\bit-rot\bit-rot'
+2026-05-09T02:12:13.1818321Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-05-09T02:12:13.1819044Z git version 2.54.0.windows.1
+2026-05-09T02:12:13.1821770Z ##[endgroup]
+2026-05-09T02:12:13.1826384Z Temporarily overriding HOME='D:\a\_temp\687403df-4b80-4666-b18b-7fa19101fa5e' before making global git config changes
+2026-05-09T02:12:13.1827584Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-09T02:12:13.1828696Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\bit-rot\bit-rot
+2026-05-09T02:12:13.1830785Z Deleting the contents of 'D:\a\bit-rot\bit-rot'
+2026-05-09T02:12:13.1831826Z ##[group]Initializing the repository
+2026-05-09T02:12:13.1832669Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\bit-rot\bit-rot
+2026-05-09T02:12:13.1836791Z Initialized empty Git repository in D:/a/bit-rot/bit-rot/.git/
+2026-05-09T02:12:13.1839042Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/gustavokuklinski/bit-rot
+2026-05-09T02:12:13.1841308Z ##[endgroup]
+2026-05-09T02:12:13.1842207Z ##[group]Disabling automatic garbage collection
+2026-05-09T02:12:13.1843051Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-05-09T02:12:13.1845227Z ##[endgroup]
+2026-05-09T02:12:13.1846049Z ##[group]Setting up auth
+2026-05-09T02:12:13.1846959Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-05-09T02:12:13.1849532Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-05-09T02:12:13.1852172Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-09T02:12:13.1854691Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-05-09T02:12:13.1856244Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-09T02:12:13.1857905Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-05-09T02:12:13.1860525Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-05-09T02:12:13.1862802Z ##[endgroup]
+2026-05-09T02:12:13.1863624Z ##[group]Fetching the repository
+2026-05-09T02:12:13.1864857Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2126677614485f0c19ce2542a6af4b69c34302b1:refs/remotes/origin/main
+2026-05-09T02:12:14.1979007Z From https://github.com/gustavokuklinski/bit-rot
+2026-05-09T02:12:14.2002936Z  * [new ref]         2126677614485f0c19ce2542a6af4b69c34302b1 -> origin/main
+2026-05-09T02:12:14.2447556Z ##[endgroup]
+2026-05-09T02:12:14.2449063Z ##[group]Determining the checkout info
+2026-05-09T02:12:14.2463512Z ##[endgroup]
+2026-05-09T02:12:14.2510433Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-05-09T02:12:14.2997530Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-05-09T02:12:14.3497243Z ##[group]Checking out the ref
+2026-05-09T02:12:14.3498893Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+2026-05-09T02:12:15.5574182Z Updating files:   8% (130/1569)
+2026-05-09T02:12:15.5624497Z Updating files:   9% (142/1569)
+2026-05-09T02:12:15.5870668Z Updating files:  10% (157/1569)
+2026-05-09T02:12:15.5965742Z Updating files:  11% (173/1569)
+2026-05-09T02:12:15.6004516Z Updating files:  12% (189/1569)
+2026-05-09T02:12:15.6039405Z Updating files:  13% (204/1569)
+2026-05-09T02:12:15.6071792Z Updating files:  14% (220/1569)
+2026-05-09T02:12:15.6103532Z Updating files:  15% (236/1569)
+2026-05-09T02:12:15.6133073Z Updating files:  16% (252/1569)
+2026-05-09T02:12:15.6166166Z Updating files:  17% (267/1569)
+2026-05-09T02:12:15.6202819Z Updating files:  18% (283/1569)
+2026-05-09T02:12:15.6234474Z Updating files:  19% (299/1569)
+2026-05-09T02:12:15.6267018Z Updating files:  20% (314/1569)
+2026-05-09T02:12:15.6303986Z Updating files:  21% (330/1569)
+2026-05-09T02:12:15.6342756Z Updating files:  22% (346/1569)
+2026-05-09T02:12:15.6389708Z Updating files:  23% (361/1569)
+2026-05-09T02:12:15.6450474Z Updating files:  24% (377/1569)
+2026-05-09T02:12:15.6484075Z Updating files:  25% (393/1569)
+2026-05-09T02:12:15.6527989Z Updating files:  26% (408/1569)
+2026-05-09T02:12:15.6585373Z Updating files:  27% (424/1569)
+2026-05-09T02:12:15.6706371Z Updating files:  28% (440/1569)
+2026-05-09T02:12:15.6707370Z Updating files:  29% (456/1569)
+2026-05-09T02:12:15.6757393Z Updating files:  30% (471/1569)
+2026-05-09T02:12:15.6758129Z Updating files:  31% (487/1569)
+2026-05-09T02:12:15.6779799Z Updating files:  32% (503/1569)
+2026-05-09T02:12:15.6812837Z Updating files:  33% (518/1569)
+2026-05-09T02:12:15.6847655Z Updating files:  34% (534/1569)
+2026-05-09T02:12:15.6879932Z Updating files:  35% (550/1569)
+2026-05-09T02:12:15.6911365Z Updating files:  36% (565/1569)
+2026-05-09T02:12:15.6941752Z Updating files:  37% (581/1569)
+2026-05-09T02:12:15.6973336Z Updating files:  38% (597/1569)
+2026-05-09T02:12:15.7002813Z Updating files:  39% (612/1569)
+2026-05-09T02:12:15.7036301Z Updating files:  40% (628/1569)
+2026-05-09T02:12:15.7065595Z Updating files:  41% (644/1569)
+2026-05-09T02:12:15.7094877Z Updating files:  42% (659/1569)
+2026-05-09T02:12:15.7127153Z Updating files:  43% (675/1569)
+2026-05-09T02:12:15.7156256Z Updating files:  44% (691/1569)
+2026-05-09T02:12:15.7186029Z Updating files:  45% (707/1569)
+2026-05-09T02:12:15.7215909Z Updating files:  46% (722/1569)
+2026-05-09T02:12:15.7246012Z Updating files:  47% (738/1569)
+2026-05-09T02:12:15.7273769Z Updating files:  48% (754/1569)
+2026-05-09T02:12:15.7317824Z Updating files:  49% (769/1569)
+2026-05-09T02:12:15.7366374Z Updating files:  50% (785/1569)
+2026-05-09T02:12:15.7393899Z Updating files:  51% (801/1569)
+2026-05-09T02:12:15.7426321Z Updating files:  52% (816/1569)
+2026-05-09T02:12:15.7460780Z Updating files:  53% (832/1569)
+2026-05-09T02:12:15.7491613Z Updating files:  54% (848/1569)
+2026-05-09T02:12:15.7523678Z Updating files:  55% (863/1569)
+2026-05-09T02:12:15.7556077Z Updating files:  56% (879/1569)
+2026-05-09T02:12:15.7589225Z Updating files:  57% (895/1569)
+2026-05-09T02:12:16.4306647Z Updating files:  58% (911/1569)
+2026-05-09T02:12:16.4307877Z Updating files:  59% (926/1569)
+2026-05-09T02:12:16.4332476Z Updating files:  60% (942/1569)
+2026-05-09T02:12:16.4336316Z Updating files:  61% (958/1569)
+2026-05-09T02:12:16.4336804Z Updating files:  62% (973/1569)
+2026-05-09T02:12:16.4338454Z Updating files:  63% (989/1569)
+2026-05-09T02:12:16.4360487Z Updating files:  64% (1005/1569)
+2026-05-09T02:12:16.4361049Z Updating files:  65% (1020/1569)
+2026-05-09T02:12:16.4361506Z Updating files:  66% (1036/1569)
+2026-05-09T02:12:16.4361928Z Updating files:  67% (1052/1569)
+2026-05-09T02:12:16.4362357Z Updating files:  68% (1067/1569)
+2026-05-09T02:12:16.4363001Z Updating files:  69% (1083/1569)
+2026-05-09T02:12:16.4364402Z Updating files:  70% (1099/1569)
+2026-05-09T02:12:16.4364977Z Updating files:  71% (1114/1569)
+2026-05-09T02:12:16.4365503Z Updating files:  72% (1130/1569)
+2026-05-09T02:12:16.4366044Z Updating files:  73% (1146/1569)
+2026-05-09T02:12:16.4366543Z Updating files:  74% (1162/1569)
+2026-05-09T02:12:16.4367055Z Updating files:  75% (1177/1569)
+2026-05-09T02:12:16.4367825Z Updating files:  76% (1193/1569)
+2026-05-09T02:12:16.4368270Z Updating files:  77% (1209/1569)
+2026-05-09T02:12:16.4368782Z Updating files:  78% (1224/1569)
+2026-05-09T02:12:16.4369280Z Updating files:  79% (1240/1569)
+2026-05-09T02:12:16.4369776Z Updating files:  80% (1256/1569)
+2026-05-09T02:12:16.4370269Z Updating files:  81% (1271/1569)
+2026-05-09T02:12:16.4370749Z Updating files:  82% (1287/1569)
+2026-05-09T02:12:16.4372063Z Updating files:  83% (1303/1569)
+2026-05-09T02:12:16.4372474Z Updating files:  84% (1318/1569)
+2026-05-09T02:12:16.4372876Z Updating files:  85% (1334/1569)
+2026-05-09T02:12:16.4373253Z Updating files:  86% (1350/1569)
+2026-05-09T02:12:16.4373666Z Updating files:  87% (1366/1569)
+2026-05-09T02:12:16.4374037Z Updating files:  88% (1381/1569)
+2026-05-09T02:12:16.4374420Z Updating files:  89% (1397/1569)
+2026-05-09T02:12:16.4374785Z Updating files:  90% (1413/1569)
+2026-05-09T02:12:16.4375231Z Updating files:  91% (1428/1569)
+2026-05-09T02:12:16.4375942Z Updating files:  92% (1444/1569)
+2026-05-09T02:12:16.4376308Z Updating files:  93% (1460/1569)
+2026-05-09T02:12:16.4376674Z Updating files:  94% (1475/1569)
+2026-05-09T02:12:16.4377033Z Updating files:  95% (1491/1569)
+2026-05-09T02:12:16.4378127Z Updating files:  96% (1507/1569)
+2026-05-09T02:12:16.4378852Z Updating files:  97% (1522/1569)
+2026-05-09T02:12:16.4379218Z Updating files:  98% (1538/1569)
+2026-05-09T02:12:16.4379556Z Updating files:  99% (1554/1569)
+2026-05-09T02:12:16.4379890Z Updating files: 100% (1569/1569)
+2026-05-09T02:12:16.4380186Z Updating files: 100% (1569/1569), done.
+2026-05-09T02:12:16.4380562Z Switched to a new branch 'main'
+2026-05-09T02:12:16.4380826Z branch 'main' set up to track 'origin/main'.
+2026-05-09T02:12:16.4381615Z ##[endgroup]
+2026-05-09T02:12:16.4382114Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-05-09T02:12:16.4382433Z 2126677614485f0c19ce2542a6af4b69c34302b1
+2026-05-09T02:12:16.4670694Z ##[group]Run actions/setup-python@v5
+2026-05-09T02:12:16.4671021Z with:
+2026-05-09T02:12:16.4671190Z   python-version: 3.11
+2026-05-09T02:12:16.4671368Z   cache: pip
+2026-05-09T02:12:16.4671522Z   check-latest: false
+2026-05-09T02:12:16.4671835Z   token: ***
+2026-05-09T02:12:16.4671995Z   update-environment: true
+2026-05-09T02:12:16.4672200Z   allow-prereleases: false
+2026-05-09T02:12:16.4672386Z   freethreaded: false
+2026-05-09T02:12:16.4672551Z ##[endgroup]
+2026-05-09T02:12:16.7109384Z ##[group]Installed versions
+2026-05-09T02:12:16.7362912Z Successfully set up CPython (3.11.9)
+2026-05-09T02:12:16.7363887Z ##[endgroup]
+2026-05-09T02:12:19.5160250Z Cache hit for: setup-python-Windows-x64-python-3.11.9-pip-774469a24e32e3e0a9da35c008206c61e38741e14b44659394fde8701c2dbaee
+2026-05-09T02:12:20.2293515Z Received 43923310 of 43923310 (100.0%), 73.4 MBs/sec
+2026-05-09T02:12:20.2294310Z Cache Size: ~42 MB (43923310 B)
+2026-05-09T02:12:20.2380939Z [command]"C:\Program Files\Git\usr\bin\tar.exe" -xf D:/a/_temp/be52393b-cbd3-4c01-bcba-ceb8bfb99dbd/cache.tzst -P -C D:/a/bit-rot/bit-rot --force-local --use-compress-program "zstd -d"
+2026-05-09T02:12:20.6931607Z Cache restored successfully
+2026-05-09T02:12:20.6976578Z Cache restored from key: setup-python-Windows-x64-python-3.11.9-pip-774469a24e32e3e0a9da35c008206c61e38741e14b44659394fde8701c2dbaee
+2026-05-09T02:12:20.7291342Z ##[group]Run pip install -r requirements.txt
+2026-05-09T02:12:20.7291738Z [36;1mpip install -r requirements.txt[0m
+2026-05-09T02:12:20.7946578Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-05-09T02:12:20.7946987Z env:
+2026-05-09T02:12:20.7947295Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:12:20.7947854Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+2026-05-09T02:12:20.7948390Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:12:20.7948857Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:12:20.7949315Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:12:20.7949686Z ##[endgroup]
+2026-05-09T02:12:27.1338527Z Collecting pygame-ce (from -r requirements.txt (line 1))
+2026-05-09T02:12:27.1366855Z   Using cached pygame_ce-2.5.7-cp311-cp311-win_amd64.whl.metadata (11 kB)
+2026-05-09T02:12:27.1777174Z Collecting Nuitka (from -r requirements.txt (line 2))
+2026-05-09T02:12:27.1780047Z   Using cached nuitka-4.0.8-cp311-cp311-win_amd64.whl
+2026-05-09T02:12:27.3055943Z Collecting faker (from -r requirements.txt (line 3))
+2026-05-09T02:12:27.3087058Z   Using cached faker-40.15.0-py3-none-any.whl.metadata (16 kB)
+2026-05-09T02:12:27.4960122Z Collecting numpy (from -r requirements.txt (line 4))
+2026-05-09T02:12:27.4989814Z   Using cached numpy-2.4.4-cp311-cp311-win_amd64.whl.metadata (6.6 kB)
+2026-05-09T02:12:27.5554287Z Collecting pygbag (from -r requirements.txt (line 5))
+2026-05-09T02:12:27.5579506Z   Using cached pygbag-0.9.3-py3-none-any.whl.metadata (7.6 kB)
+2026-05-09T02:12:27.5804013Z Collecting buildozer (from -r requirements.txt (line 7))
+2026-05-09T02:12:27.5829223Z   Using cached buildozer-1.5.0-py3-none-any.whl.metadata (139 kB)
+2026-05-09T02:12:27.5943626Z Requirement already satisfied: setuptools in C:\hostedtoolcache\windows\Python\3.11.9\x64\Lib\site-packages (from -r requirements.txt (line 8)) (65.5.0)
+2026-05-09T02:12:27.7982123Z Collecting cython==0.29.34 (from -r requirements.txt (line 9))
+2026-05-09T02:12:27.8010800Z   Using cached Cython-0.29.34-py2.py3-none-any.whl.metadata (3.1 kB)
+2026-05-09T02:12:27.8396171Z Collecting tzdata (from faker->-r requirements.txt (line 3))
+2026-05-09T02:12:27.8423347Z   Using cached tzdata-2026.2-py2.py3-none-any.whl.metadata (1.4 kB)
+2026-05-09T02:12:27.8648805Z Collecting pexpect (from buildozer->-r requirements.txt (line 7))
+2026-05-09T02:12:27.8674313Z   Using cached pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+2026-05-09T02:12:27.9211450Z Collecting virtualenv (from buildozer->-r requirements.txt (line 7))
+2026-05-09T02:12:27.9239707Z   Using cached virtualenv-21.3.1-py3-none-any.whl.metadata (3.5 kB)
+2026-05-09T02:12:27.9530027Z Collecting sh (from buildozer->-r requirements.txt (line 7))
+2026-05-09T02:12:27.9556705Z   Using cached sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2026-05-09T02:12:27.9850317Z Collecting ptyprocess>=0.5 (from pexpect->buildozer->-r requirements.txt (line 7))
+2026-05-09T02:12:27.9875755Z   Using cached ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+2026-05-09T02:12:28.0061824Z Collecting distlib<1,>=0.3.7 (from virtualenv->buildozer->-r requirements.txt (line 7))
+2026-05-09T02:12:28.0087587Z   Using cached distlib-0.4.0-py2.py3-none-any.whl.metadata (5.2 kB)
+2026-05-09T02:12:28.0344095Z Collecting filelock<4,>=3.24.2 (from virtualenv->buildozer->-r requirements.txt (line 7))
+2026-05-09T02:12:28.0372135Z   Using cached filelock-3.29.0-py3-none-any.whl.metadata (2.0 kB)
+2026-05-09T02:12:28.0620716Z Collecting platformdirs<5,>=3.9.1 (from virtualenv->buildozer->-r requirements.txt (line 7))
+2026-05-09T02:12:28.0651319Z   Using cached platformdirs-4.9.6-py3-none-any.whl.metadata (4.7 kB)
+2026-05-09T02:12:28.0839493Z Collecting python-discovery>=1.2.2 (from virtualenv->buildozer->-r requirements.txt (line 7))
+2026-05-09T02:12:28.0870485Z   Using cached python_discovery-1.3.0-py3-none-any.whl.metadata (5.5 kB)
+2026-05-09T02:12:28.0985688Z Using cached Cython-0.29.34-py2.py3-none-any.whl (988 kB)
+2026-05-09T02:12:28.1018047Z Using cached pygame_ce-2.5.7-cp311-cp311-win_amd64.whl (10.4 MB)
+2026-05-09T02:12:28.1102493Z Using cached faker-40.15.0-py3-none-any.whl (2.0 MB)
+2026-05-09T02:12:28.1137266Z Using cached numpy-2.4.4-cp311-cp311-win_amd64.whl (12.6 MB)
+2026-05-09T02:12:28.1225230Z Using cached pygbag-0.9.3-py3-none-any.whl (176 kB)
+2026-05-09T02:12:28.1254143Z Using cached buildozer-1.5.0-py3-none-any.whl (86 kB)
+2026-05-09T02:12:28.1277369Z Using cached pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+2026-05-09T02:12:28.1301060Z Using cached ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+2026-05-09T02:12:28.1356032Z Using cached sh-2.2.2-py3-none-any.whl (38 kB)
+2026-05-09T02:12:28.1379940Z Using cached tzdata-2026.2-py2.py3-none-any.whl (349 kB)
+2026-05-09T02:12:28.1412116Z Using cached virtualenv-21.3.1-py3-none-any.whl (7.6 MB)
+2026-05-09T02:12:28.1480102Z Using cached distlib-0.4.0-py2.py3-none-any.whl (469 kB)
+2026-05-09T02:12:28.1507134Z Using cached filelock-3.29.0-py3-none-any.whl (39 kB)
+2026-05-09T02:12:28.1530336Z Using cached platformdirs-4.9.6-py3-none-any.whl (21 kB)
+2026-05-09T02:12:28.1556243Z Using cached python_discovery-1.3.0-py3-none-any.whl (33 kB)
+2026-05-09T02:12:28.2806717Z Installing collected packages: ptyprocess, Nuitka, distlib, tzdata, sh, pygbag, pygame-ce, platformdirs, pexpect, numpy, filelock, cython, python-discovery, faker, virtualenv, buildozer
+2026-05-09T02:12:45.8154262Z 
+2026-05-09T02:12:45.8173276Z Successfully installed Nuitka-4.0.8 buildozer-1.5.0 cython-0.29.34 distlib-0.4.0 faker-40.15.0 filelock-3.29.0 numpy-2.4.4 pexpect-4.9.0 platformdirs-4.9.6 ptyprocess-0.7.0 pygame-ce-2.5.7 pygbag-0.9.3 python-discovery-1.3.0 sh-2.2.2 tzdata-2026.2 virtualenv-21.3.1
+2026-05-09T02:12:45.8185525Z 
+2026-05-09T02:12:45.8188995Z [notice] A new release of pip is available: 26.1 -> 26.1.1
+2026-05-09T02:12:45.8189986Z [notice] To update, run: python.exe -m pip install --upgrade pip
+2026-05-09T02:12:46.5475262Z ##[group]Run nuitka --standalone --assume-yes-for-downloads --output-dir=./build --include-data-dir=game=game --windows-console-mode=disable --windows-icon-from-ico=./game/icons/favicon.ico bitrot.py
+2026-05-09T02:12:46.5476771Z [36;1mnuitka --standalone --assume-yes-for-downloads --output-dir=./build --include-data-dir=game=game --windows-console-mode=disable --windows-icon-from-ico=./game/icons/favicon.ico bitrot.py[0m
+2026-05-09T02:12:46.5538104Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-05-09T02:12:46.5538422Z env:
+2026-05-09T02:12:46.5538667Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:12:46.5539102Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+2026-05-09T02:12:46.5539527Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:12:46.5539905Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:12:46.5540302Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:12:46.5540588Z ##[endgroup]
+2026-05-09T02:12:47.3764715Z Nuitka-Options: Used command line options:
+2026-05-09T02:12:47.3766744Z Nuitka-Options:   --standalone --assume-yes-for-downloads --output-dir=./build --include-data-dir=game=game --windows-console-mode=disable --windows-icon-from-ico=./game/icons/favicon.ico bitrot.py
+2026-05-09T02:12:47.7763833Z Nuitka: Starting Python compilation with:
+2026-05-09T02:12:47.7765069Z Nuitka:   Version '4.0.8' on Python 3.11 (flavor 'CPython Official') commercial grade 'not installed'.
+2026-05-09T02:15:15.5228014Z Nuitka-Plugins:dll-files: Found 16 files DLLs from pygame installation.
+2026-05-09T02:15:15.9540875Z Nuitka: Downloading 'https://dependencywalker.com/depends22_x64.zip'.
+2026-05-09T02:15:16.6130747Z Nuitka: Extracting to 'C:\Users\runneradmin\AppData\Local\Nuitka\Nuitka\Cache\downloads\depends\x86_64\depends.exe'
+2026-05-09T02:15:23.3970978Z Nuitka: Completed Python level compilation and optimization.
+2026-05-09T02:15:23.3972058Z Nuitka: Generating source code for C backend compiler.
+2026-05-09T02:15:49.0855227Z Nuitka: Running data composer tool for optimal constant value handling.
+2026-05-09T02:15:50.1114930Z Nuitka: Running C compilation via Scons.
+2026-05-09T02:15:53.0979459Z Nuitka-Scons: Backend C compiler: cl (cl 14.3).
+2026-05-09T02:54:10.5227871Z Nuitka-Scons: Backend C linking with 1001 files (no progress information available for this stage).
+2026-05-09T02:54:12.5311649Z Nuitka-Scons: Compiled 1001 C files using clcache with 0 cache hits and 1001 cache misses.
+2026-05-09T02:54:12.5788626Z Nuitka-Postprocessing: Adding 1 icon(s) from icon file 'game\icons\favicon.ico'.
+2026-05-09T02:54:14.2025473Z Nuitka-Options: Included 1379 data files due to specified data dir 'game' on command line.
+2026-05-09T02:54:14.2030047Z Nuitka-Plugins:data-files: Included data file 'pygame\freesansbold.ttf' due to package data for 'pygame'.
+2026-05-09T02:54:14.2032234Z Nuitka-Plugins:data-files: Included data file 'pygame\pygame_icon.bmp' due to package data for 'pygame'.
+2026-05-09T02:54:14.2034125Z Nuitka-Plugins:data-files: Included 604 data files due to package data directory '.' for 'tzdata.zoneinfo'.
+2026-05-09T02:54:14.2035470Z Nuitka: Keeping build directory 'build\bitrot.build'.
+2026-05-09T02:54:14.2041123Z Nuitka: Successfully created 'D:\a\bit-rot\bit-rot\build\bitrot.dist\bitrot.exe'.
+2026-05-09T02:54:21.2440606Z ##[group]Run # Nuitka --standalone generates a folder named 'bitrot.dist' containing the .exe, DLLs, and the bundled game/ folder.
+2026-05-09T02:54:21.2442449Z [36;1m# Nuitka --standalone generates a folder named 'bitrot.dist' containing the .exe, DLLs, and the bundled game/ folder.[0m
+2026-05-09T02:54:21.2444735Z [36;1m# We simply rename this master folder to 'release' for zipping.[0m
+2026-05-09T02:54:21.2445508Z [36;1mmv build/bitrot.dist release[0m
+2026-05-09T02:54:21.2467345Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-05-09T02:54:21.2468056Z env:
+2026-05-09T02:54:21.2468394Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:54:21.2468894Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+2026-05-09T02:54:21.2469394Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:54:21.2470123Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:54:21.2470545Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:54:21.2470906Z ##[endgroup]
+2026-05-09T02:54:21.4411722Z ##[group]Run Compress-Archive -Path "release\*" -DestinationPath "bitrot_windows.zip"
+2026-05-09T02:54:21.4413206Z [36;1mCompress-Archive -Path "release\*" -DestinationPath "bitrot_windows.zip"[0m
+2026-05-09T02:54:21.4491348Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-05-09T02:54:21.4491742Z env:
+2026-05-09T02:54:21.4492025Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:54:21.4492532Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+2026-05-09T02:54:21.4493331Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:54:21.4493760Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:54:21.4494208Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:54:21.4494726Z ##[endgroup]
+2026-05-09T02:54:28.3919252Z ##[group]Run actions/upload-artifact@v4
+2026-05-09T02:54:28.3919863Z with:
+2026-05-09T02:54:28.3920205Z   name: bitrot-windows-build
+2026-05-09T02:54:28.3920675Z   path: bitrot_windows.zip
+2026-05-09T02:54:28.3921114Z   retention-days: 5
+2026-05-09T02:54:28.3921525Z   if-no-files-found: warn
+2026-05-09T02:54:28.3921967Z   compression-level: 6
+2026-05-09T02:54:28.3922393Z   overwrite: false
+2026-05-09T02:54:28.3922828Z   include-hidden-files: false
+2026-05-09T02:54:28.3923283Z env:
+2026-05-09T02:54:28.3923811Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:54:28.3924737Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+2026-05-09T02:54:28.3925612Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:54:28.3926449Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:54:28.3927285Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-05-09T02:54:28.3928025Z ##[endgroup]
+2026-05-09T02:54:28.7579522Z With the provided path, there will be 1 file uploaded
+2026-05-09T02:54:28.7587140Z Artifact name is valid!
+2026-05-09T02:54:28.7590704Z Root directory input is valid!
+2026-05-09T02:54:29.5437432Z Beginning upload of artifact content to blob storage
+2026-05-09T02:54:30.5444011Z Uploaded bytes 8388608
+2026-05-09T02:54:30.5444493Z Uploaded bytes 16777216
+2026-05-09T02:54:30.5444934Z Uploaded bytes 25165824
+2026-05-09T02:54:30.6000106Z Uploaded bytes 33554432
+2026-05-09T02:54:30.9371169Z Uploaded bytes 41943040
+2026-05-09T02:54:31.0252368Z Uploaded bytes 44180449
+2026-05-09T02:54:31.0611866Z Finished uploading artifact content to blob storage!
+2026-05-09T02:54:31.0617689Z SHA256 digest of uploaded artifact zip is 80e894da4c3032cf3301730c8473032f03a02bfa9feb3a1727ca5f35914e94de
+2026-05-09T02:54:31.0620571Z Finalizing artifact upload
+2026-05-09T02:54:31.1927738Z Artifact bitrot-windows-build.zip successfully finalized. Artifact ID 6892228695
+2026-05-09T02:54:31.1929751Z Artifact bitrot-windows-build has been successfully uploaded! Final size is 44180449 bytes. Artifact ID is 6892228695
+2026-05-09T02:54:31.1942905Z Artifact download URL: https://github.com/gustavokuklinski/bit-rot/actions/runs/25588790906/artifacts/6892228695
+2026-05-09T02:54:31.2335806Z Post job cleanup.
+2026-05-09T02:54:31.4554995Z Cache hit occurred on the primary key setup-python-Windows-x64-python-3.11.9-pip-774469a24e32e3e0a9da35c008206c61e38741e14b44659394fde8701c2dbaee, not saving cache.
+2026-05-09T02:54:31.4833520Z Post job cleanup.
+2026-05-09T02:54:31.7713654Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-05-09T02:54:31.8145251Z git version 2.54.0.windows.1
+2026-05-09T02:54:31.8319071Z Temporarily overriding HOME='D:\a\_temp\38f73168-a04c-4397-99bd-f1470752ca1b' before making global git config changes
+2026-05-09T02:54:31.8334012Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-09T02:54:31.8339438Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\bit-rot\bit-rot
+2026-05-09T02:54:31.8788153Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-05-09T02:54:31.9146298Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-05-09T02:54:32.5047653Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-09T02:54:32.5310086Z http.https://github.com/.extraheader
+2026-05-09T02:54:32.5359066Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-05-09T02:54:32.5664397Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-05-09T02:54:33.1131721Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-09T02:54:33.1444423Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-05-09T02:54:33.7120619Z Cleaning up orphan processes
+2026-05-09T02:54:33.7234313Z Terminate orphan process: pid (7972) (vctip)
+2026-05-09T02:54:33.7322782Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

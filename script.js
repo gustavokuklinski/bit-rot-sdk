@@ -121,19 +121,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // BUILD SPECIFIC LAYOUT: ITEM ITEM [4 CHARACTERS] ITEM ITEM
     
-    // First 2 Items
-    // showcase.appendChild(buildItem());
-    // showcase.appendChild(buildItem());
-    
+   
     // 4 Random Characters (Zombies / Players)
     for (let i = 0; i < 4; i++) {
         showcase.appendChild(buildCharacter());
         showcase.appendChild(buildItem());
     }
-    
-    // Last 2 Items
-    
-    // showcase.appendChild(buildItem());
+
 
     // Animation Loop: Swap the base image src every 400ms to wiggle characters
     setInterval(() => {

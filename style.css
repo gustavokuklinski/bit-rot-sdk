@@ -1,0 +1,338 @@
+/* Load Google Font for Titles */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* Load the custom local font for Plain Text */
+@font-face {
+    font-family: 'Oxanium';
+    src: url('game_doc/lib/font/Oxanium-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --bg-color: #050505;
+    --text-main: #d1d1d1;
+    --accent-red: #8b0000;
+    --accent-green: #39ff14;
+    --panel-bg: #080808;
+    --main-font: 'Oxanium', sans-serif;
+    --title-font: 'VT323', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--main-font); /* Default text is Oxanium */
+    line-height: 1.6;
+    font-size: 22px;
+    overflow-x: hidden;
+}
+
+/* ----------------------------------------- */
+/* RANDOMIZED CRT MONITOR FILTER             */
+/* ----------------------------------------- */
+.crt-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 9999;
+    pointer-events: none; /* Let clicks pass through to the page */
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 4px, 6px 100%;
+    animation: crt-flicker 0.15s infinite, crt-scanlines 10s linear infinite;
+    opacity: 0.8;
+}
+
+/* Moves the horizontal scanline grid downwards continuously */
+@keyframes crt-scanlines {
+    0% { background-position: 0 0, 0 0; }
+    100% { background-position: 0 100vh, 0 0; }
+}
+
+/* Creates irregular opacity flickering and tiny screen "jumps" */
+@keyframes crt-flicker {
+    0% { opacity: 0.8; transform: translateY(0); }
+    5% { opacity: 0.9; transform: translateY(1px); }
+    10% { opacity: 0.8; transform: translateY(0); }
+    50% { opacity: 0.8; transform: translateY(0); }
+    52% { opacity: 0.85; transform: translateY(-1px); }
+    54% { opacity: 0.8; transform: translateY(0); }
+    95% { opacity: 0.8; transform: translateY(0); }
+    96% { opacity: 0.75; transform: translateY(1px); }
+    98% { opacity: 0.8; transform: translateY(0); }
+    100% { opacity: 0.8; transform: translateY(0); }
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 3; 
+}
+
+/* ----------------------------------------- */
+/* TYPOGRAPHY (TITLES = VT323)               */
+/* ----------------------------------------- */
+h1, h2, h3, .tagline, .top-nav a, .download-nav, .cta-section h2 {
+    font-family: var(--title-font);
+    letter-spacing: 1px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 60px;
+    border-bottom: 4px dashed var(--accent-red);
+    padding-bottom: 30px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    max-width: 300px;
+    height: auto;
+    image-rendering: pixelated;
+    display: block;
+    margin: 0 auto;
+}
+
+.tagline {
+    color: var(--accent-green);
+    font-size: 2.4rem;
+    margin-top: 10px;
+}
+
+.top-nav {
+    margin-top: 25px;
+    font-size: 2.2rem;
+}
+
+.top-nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin: 0 12px;
+    transition: color 0.1s;
+}
+
+.top-nav a:hover {
+    color: var(--accent-green);
+    background: #000;
+}
+
+.download-nav {
+    margin-top: 15px;
+    font-size: 2.2rem;
+    color: var(--text-main);
+}
+
+.download-nav a {
+    color: var(--accent-red);
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: bold;
+}
+
+.download-nav a:hover {
+    color: #fff;
+    background: var(--accent-red);
+}
+
+.section-title {
+    color: var(--accent-red);
+    font-size: 3rem;
+    margin-bottom: 20px;
+    border-left: 8px solid var(--accent-red);
+    padding-left: 15px;
+    background: rgba(0,0,0,0.5);
+    display: inline-block;
+    padding-right: 15px;
+}
+
+/* 8-BIT UI PANEL STYLING */
+.lore-box {
+    background: var(--panel-bg);
+    border: 4px solid var(--text-main);
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.lore-box:hover {
+    border-color: var(--accent-red);
+}
+
+.lore-box p {
+    margin-bottom: 15px;
+}
+
+.factions {
+    color: #aaa;
+    font-style: italic;
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+}
+
+.objectives {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.objective-card {
+    background: var(--panel-bg);
+    border: 4px solid var(--accent-green);
+    padding: 20px;
+}
+
+.objective-card:hover {
+    background: #111;
+}
+
+.objective-card h3 {
+    color: var(--accent-green);
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+/* Procedural Sprites Section */
+.sprite-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin-bottom: 0px;
+    min-height: 200px;
+}
+
+.character-sprite, .item-sprite {
+    position: relative;
+    width: 32px;  
+    height: 32px;
+    transform: scale(3); 
+    margin: 30px; 
+    image-rendering: pixelated; 
+}
+
+/* Character layered images */
+.character-sprite img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+}
+
+/* Independent item styles */
+.item-sprite img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+/* Streamer & Modder Section */
+.creator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.creator-card {
+    background: var(--panel-bg);
+    border: 4px solid #555;
+    padding: 25px;
+    border-top: 6px solid var(--accent-red);
+}
+
+.creator-card h3 {
+    color: var(--text-main);
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+    background: rgba(255,255,255,0.1);
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.creator-card a {
+    color: var(--accent-green);
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent-green);
+}
+
+.creator-card a:hover {
+    background: var(--accent-green);
+    color: #000;
+}
+
+.features-list {
+    list-style: none;
+    margin-bottom: 50px;
+    background: var(--panel-bg);
+    border: 4px solid var(--text-main);
+    padding: 30px;
+}
+
+.features-list li {
+    margin-bottom: 20px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.features-list li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: var(--accent-red);
+    font-weight: bold;
+}
+
+.features-list strong {
+    color: #fff;
+    background: rgba(139, 0, 0, 0.3);
+    padding: 0 5px;
+}
+
+.cta-section {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background: var(--panel-bg);
+    border: 4px solid var(--accent-green);
+}
+
+.itch-embed-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    border: 4px solid #333;
+    background: #000;
+    padding: 10px;
+    display: inline-block;
+}
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 1.2rem;
+    color: #888;
+    background-color: var(--panel-bg);
+    border: 4px solid #333;
+    padding: 15px;
+}

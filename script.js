@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const showcase = document.getElementById('sprite-showcase');
-
+    const showcase2 = document.getElementById('sprite-showcase-2');
     // BUILD SPECIFIC LAYOUT: ITEM ITEM [4 CHARACTERS] ITEM ITEM
     
    
@@ -126,6 +126,10 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < 4; i++) {
         showcase.appendChild(buildCharacter());
         showcase.appendChild(buildItem());
+    }
+    for (let i = 0; i < 4; i++) {
+        showcase2.appendChild(buildCharacter());
+        showcase2.appendChild(buildItem());
     }
 
 

@@ -14,7 +14,7 @@ Understand the core design of the SDK
 
 **Basic `game/` tree**
 
-```game$ tree -d```
+```$ tree -d```
 
 * `icons/` - Game basic icons
 * `lib/` - Full reference: **Tweak `game/lib` tree**
